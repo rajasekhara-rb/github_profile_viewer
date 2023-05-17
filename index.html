@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile and Repo Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center bg-dark">
+        <h1 class="mt-3 text-light">GitHub User Profile and Repos App</h1>
+        <input type="text" name="userName" id="userName" class="form-control mt-3 w-50"
+            placeholder="Enter GitHub user name">
+        <div class="d-flex my-1">
+            <button id="profileBtn" class="btn btn-light m-2" onclick="getProfile()">Get Profile</button>
+            <button id="repoBtn" class="btn btn-light m-2" onclick="getRepos()">Get Repo's</button>
+        </div>
+    </div>
+    <div class="bg-secondary container-fluid d-flex flex-column justify-content-center align-items-center">
+        <div id="profile" class="d-flex align-items-center justify-content-center w-75 rounded bg-dark m-5">
+        </div>
+    </div>
+    <div id="paginationSelect" class="p-2 m-3 d-flex">
+        <span class="p-2">Show</span>
+        <select name="perPage" id="perPage" class="form-control col-1" onchange="">
+            <option value="5">5</option>
+            <option value="5">10</option>
+            <option value="5">25</option>
+            <option value="5">50</option>
+            <option value="5">100</option>
+        </select>
+        <span class="p-2">Per Page</span>
+    </div>
+    <div class="bg-dark container-fluid d-flex flex-column justify-content-center align-items-center">
+        
+        <div id="repo" class="d-flex flex-column align-items-center justify-content-center w-75 rounded bg-light m-5 p-2 text-light">
+        </div>
+
+        <div id="pagination" class="container-fluid">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
